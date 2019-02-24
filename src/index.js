@@ -1,3 +1,7 @@
-const message = 'Hopefully it works';
+require('./css/styles.scss');
 
-alert(message);
+import sum from './math';
+
+const total = sum(1, 29);
+
+alert(total);

@@ -1,0 +1,15 @@
+$hoveredColor: rgb(235, 225, 61);
+$clickedColor: rgb(193, 38, 209);
+
+#main-title {
+  font-family: sans-serif;
+  color: rgb(12, 153, 111);
+  font-weight: bold;
+  display: block;
+  text-align: center;
+
+  &:hover {
+    color: $clickedColor;
+    transition: color 0.5s;
+  }
+}
