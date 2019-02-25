@@ -3,8 +3,9 @@ const webpack = require('webpack');
 
 module.exports = {
 
-  watch: true,
   mode: "development",
+  watch: true,
+
 
   entry: {
     app: './src/index.js'
@@ -41,7 +42,7 @@ module.exports = {
 
   // resolve: {
   //   extensions: [
-  //     ' ', '.js', '.jsx', '.css'
+  //     '.js'
   //   ]
   // }
 

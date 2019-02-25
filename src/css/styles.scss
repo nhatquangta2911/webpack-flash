@@ -1,5 +1,5 @@
 $hoveredColor: rgb(235, 225, 61);
-$clickedColor: rgb(193, 38, 209);
+$clickedColor: rgb(192, 109, 200);
 
 #main-title {
   font-family: sans-serif;
@@ -10,6 +10,32 @@ $clickedColor: rgb(193, 38, 209);
 
   &:hover {
     color: $clickedColor;
-    transition: color 0.5s;
+    font-size: 50px;
+    padding-bottom: 100px;
+    transition: color 0.2s;
+    transition: padding-bottom 0.2s;
+    transition: font-size 0.2s;
   }
 }
+
+  li {
+    font-family: sans-serif;
+    color: rgb(12, 153, 111);
+    font-weight: bold;
+    margin: 15px 0;
+    width: (90% / 5);
+    float: left;
+    list-style: none;
+
+    &:hover {
+      color: $clickedColor;
+      font-size: 80px;
+      transition: color 0.2s;
+      transition: font-size 0.2s;
+      padding-left: 10px;
+      margin: 2%;
+      border-radius: 10px;
+      background-color: rgb(165, 231, 195);
+    }
+
+  }
