@@ -1,52 +1,59 @@
 require('./css/styles.scss');
+import 'jquery';
 
 window.onload = function() {
 
+  // $("#small-title").on("click", () => {
+  //   $("#small-title").css({"color": "rgb(98, 199, 197)"});
+  //   $("#small-title").css({"font-weight": "bold"});
+  //   $("#small-title").css({"font-family": "sans-serif"});
+  //   $("#small-title").css({"font-size": "30px"});
+  // });
 
-// 1. const
-// const pi = 3.142;
+  // 1. const
+  // const pi = 3.142;
 
-// var calcArea = (r) => pi * r * r;
-// console.log(Math.round(calcArea(4)));
+  // var calcArea = (r) => pi * r * r;
+  // console.log(Math.round(calcArea(4)));
 
-// function calcArea(r) {
-//    console.log('The area : ' + pi * (r ** 2));
-// }
+  // function calcArea(r) {
+  //    console.log('The area : ' + pi * (r ** 2));
+  // }
 
-// var calcArea = (r) => {
-//   const pi = 1;
-//   console.log('The area is : ' + pi * r * r);
-// };
-// calcArea(5);
+  // var calcArea = (r) => {
+  //   const pi = 1;
+  //   console.log('The area is : ' + pi * r * r);
+  // };
+  // calcArea(5);
 
-// Test jQuery
-// window.onload = function() {
-//
-//   const pi = 3.14;
-//   var title = document.getElementById("main-title");
-//   title.onclick = function() {
-//     console.log('Hi ' + pi);
-//   };
-//
-// };
-
-
-//  2. let
-
-// window.onload = function() {
-//
-//   var items = document.getElementsByTagName("li");
-//
-//   for (let i = 0; i < items.length; i++) {
-//     items[i].onclick = function() {
-//       console.log(i + 1);
-//     };
-//   }
-//
-// };
+  // Test jQuery
+  // window.onload = function() {
+  //
+  //   const pi = 3.14;
+  //   var title = document.getElementById("main-title");
+  //   title.onclick = function() {
+  //     console.log('Hi ' + pi);
+  //   };
+  //
+  // };
 
 
-// 3. default parameters
+  //  2. let
+
+  // window.onload = function() {
+  //
+  //   var items = document.getElementsByTagName("li");
+  //
+  //   for (let i = 0; i < items.length; i++) {
+  //     items[i].onclick = function() {
+  //       console.log(i + 1);
+  //     };
+  //   }
+  //
+  // };
+
+
+  // 3. default parameters
 
 
   // function log(number = 0) {
@@ -64,94 +71,94 @@ window.onload = function() {
   // specialLog('Ryan', 21); // Can be overrided
 
 
-// 4. spread operator
+  // 4. spread operator
 
-// var numbers1 = [29, 11];
-// var numbers2 = [...numbers1, 19, 97];
-//
-// function value(a, b, c, d) {
-//     console.log(a + b + c + d);
-// }
-//
-// value(...numbers2);
-
-
-// 5. template strings
-
-// var note = `Template strings is pretty similar to normal strings
-// except that it has a lot more extra features and cool stuff you would be ablt to do`;
-
-// console.log(note);
-
-// function specialLog(name, age) {
-//   console.log(`My name is ${name}
-// I'm turning ${10 + 12 + age} this year`);
-// }
-//
-// specialLog('Ryan', 22);
-//
+  // var numbers1 = [29, 11];
+  // var numbers2 = [...numbers1, 19, 97];
+  //
+  // function value(a, b, c, d) {
+  //     console.log(a + b + c + d);
+  // }
+  //
+  // value(...numbers2);
 
 
-// 6. Object literal Enhancement
+  // 5. template strings
 
-// var name = 'Ryan';
-// var age = 22;
-//
-// var meMyself = {
-//
-//   name, age,
-//
-//   doStuff(something) {
-//     console.log(`${name} - ${age} did not ${something} hard`);
-//   }
-//
-// };
-//
-// console.log(meMyself.name);
-// console.log(meMyself.doStuff('study'));
+  // var note = `Template strings is pretty similar to normal strings
+  // except that it has a lot more extra features and cool stuff you would be ablt to do`;
+
+  // console.log(note);
+
+  // function specialLog(name, age) {
+  //   console.log(`My name is ${name}
+  // I'm turning ${10 + 12 + age} this year`);
+  // }
+  //
+  // specialLog('Ryan', 22);
+  //
 
 
-// 7. New String Methods (repeat, startsWith, endsWith, includes)
+  // 6. Object literal Enhancement
 
-// var str = `It's time for goodbye!
-// `;
-//
-// console.log(str.repeat(100));
-//
-// var str = "It's time for goodbye!";
-//
-// console.log(str.startsWith(`I`));
-// console.log(str.startsWith('time', 5));
-// console.log(str.endsWith('time', str.length - 13));
-
-
-// 8. Arrow functions
-
-// var dude = {
-//   name: 'Ryan',
-//   sleep(times) {
-//     window.setInterval( () => {
-//       if(times > 0) {
-//         console.log(this.name + ` sleeped ${times} times in this week`);
-//         times--;
-//       }
-//     }, 300);
-//   }
-// };
-//
-// dude.sleep(33);
+  // var name = 'Ryan';
+  // var age = 22;
+  //
+  // var meMyself = {
+  //
+  //   name, age,
+  //
+  //   doStuff(something) {
+  //     console.log(`${name} - ${age} did not ${something} hard`);
+  //   }
+  //
+  // };
+  //
+  // console.log(meMyself.name);
+  // console.log(meMyself.doStuff('study'));
 
 
-// 9. Sets
+  // 7. New String Methods (repeat, startsWith, endsWith, includes)
 
-// var numbers = [2, 9, 1, 1, 1, 9, 9, 7];
-//
-// var refinedNumbers = new Set(numbers);
-//
-// console.log(...refinedNumbers);
+  // var str = `It's time for goodbye!
+  // `;
+  //
+  // console.log(str.repeat(100));
+  //
+  // var str = "It's time for goodbye!";
+  //
+  // console.log(str.startsWith(`I`));
+  // console.log(str.startsWith('time', 5));
+  // console.log(str.endsWith('time', str.length - 13));
 
 
-// 10. Generators
+  // 8. Arrow functions
+
+  // var dude = {
+  //   name: 'Ryan',
+  //   sleep(times) {
+  //     window.setInterval( () => {
+  //       if(times > 0) {
+  //         console.log(this.name + ` sleeped ${times} times in this week`);
+  //         times--;
+  //       }
+  //     }, 300);
+  //   }
+  // };
+  //
+  // dude.sleep(33);
+
+
+  // 9. Sets
+
+  // var numbers = [2, 9, 1, 1, 1, 9, 9, 7];
+  //
+  // var refinedNumbers = new Set(numbers);
+  //
+  // console.log(...refinedNumbers);
+
+
+  // 10. Generators
 
   // function* gen() {
   //   yield console.log('Work #1');
@@ -164,21 +171,281 @@ window.onload = function() {
   // var myGen = gen();
   // myGen.next();
 
-  function* generator() {
-    var tweets = yield $.getJSON('./data/tweets.json');
-  }
 
-  function genWrapper(generator) {
-    var myGen  = generator();
+  // $("#small-title").on("click", () => {
+  //   var request = new XMLHttpRequest();
+  //   request.open('GET', 'https://learnwebcode.github.io/json-example/animals-1.json');
+  //   request.onload = () => {
+  //     var data = JSON.parse(request.responseText);
+  //     console.log(data[1]);
+  //   };
+  //   request.send();
+  // });
 
-    function handle(yielded) {
-      if(!yielded.done) {
-        yielded.value.then(data => handle(myGen.next(data)));
-      }
+  // JS Coders Tokyo
+
+  // var numbers = [2, 9, 1, 1, 1, 9, 9, 7];
+  //
+  // var setNumbers = new Set(numbers);
+  //
+  // var squaredNumbers = [...setNumbers].map(x => x * x );
+  //
+  // console.log(squaredNumbers);
+
+  // function sum() {
+  //
+  //   const numbers = Array.from(arguments);
+  //
+  //   return numbers.reduce((sum, num) => {
+  //     return sum + num;
+  //   }, 0);
+  //
+  // }
+  //
+  //
+  // console.log(sum(2, 9, 1, 1, 1, 9, 9, 7));
+  //
+
+  // function concatString() {
+  //
+  //   const words = Array.from(arguments);
+  //
+  //   return words.reduce((result, word) => {
+  //     return result.concat(word, ' ');
+  //   }, '');
+  //
+  // }
+  //
+  // console.log(concatString('Ta', 'Nhat', 'Quang'));
+
+  // var student1 = {
+  //   "name": "Ryan",
+  //   "age": 22,
+  //   "rate": 3
+  // };
+  // var student2 = {
+  //   "name": "Andrew",
+  //   "age": 19,
+  //   "rate": 4
+  // };
+  //
+  // var students = [student1, student2];
+  //
+  // function totalRate() {
+  //
+  //   const students = Array.from(arguments);
+  //
+  //   return students.reduce((totalRate, student) => {
+  //     return totalRate + student.rate * student.age;
+  //   }, 0);
+  //
+  // }
+  //
+  // console.log(totalRate(...students));
+
+  // 9-10. call-apply
+
+  // function specialGreeting() {
+  //   console.log(`Hello ${this.name} !`);
+  // }
+  //
+  // var boss = {
+  //   name: 'Ryu',
+  //   weight: 3.3
+  // };
+  //
+  // specialGreeting.call(boss);
+
+  // function sum() {
+  //
+  //   const summary = Array.from(arguments);
+  //
+  //   return summary.reduce((sum, num) => sum + num, 0);
+  //
+  // }
+  //
+  // function average() {
+  //
+  //   return sum.apply(null, arguments) / arguments.length;
+  //
+  // }
+  //
+  // console.log(average(2, 9, 1, 1, 1, 9, 9, 7));
+
+
+  // 11. enhanced object literal
+
+  // const name = 'Tom';
+  // const weight = 2.1;
+  //
+  // const boss = {
+  //
+  //   name, weight,
+  //   run() {
+  //     console.log(`${this.name} is running`);
+  //   }
+  //
+  // };
+  //
+  // const sen = boss;
+  // sen.name = 'Sen';
+  //
+  // boss.run.call(sen);
+  //
+
+  // 12. class
+
+  // class Mouse {
+  //
+  //   constructor(name) {
+  //     this.name = name;
+  //   }
+  //
+  //   run() {
+  //     console.log(`${this.name} is running`);
+  //   }
+  //
+  // }
+  //
+  // const boss = new Mouse('Jerry');
+  // boss.run();
+
+  // 13. class inheritance
+
+  class Animal {
+
+    constructor(name) {
+      this.name = name;
     }
+
+    eat() {
+      console.log(`${this.name} is eating`);
+    }
+
   }
 
+  // function Bird(name) {
+  //   Animal.apply(this, arguments);
+  // }
+
+  // Bird has the functions which belongs to Animal
+  // Bird.prototype = new Animal();
+  // Bird.prototype.fly = function() {
+  //   console.log(`${this.name} is flying`);
+  // };
+  //
+  // const palli = new Bird('PALLI');
+  // palli.fly();
+  //
+  // const piggi = new Animal('PIGGI');
+  // piggi.fly.apply(palli);
+
+  // class Bird extends Animal {
+  //   fly() {
+  //     console.log(`${this.name} is flying`);
+  //   }
+  // }
+  //
+  // const dally = new Bird('Dally');
+  // dally.fly();
+
+  // 14. method overring
+
+  // class Baking {
+  //   bake() {
+  //     console.log('Baking...');
+  //   }
+  // }
+  //
+  // function specialBake() {
+  //   console.log('Make something special...');
+  // }
+  //
+  // class SpecialBaking extends Baking {
+  //   bake(cb) {
+  //     console.log('Special Baking...');
+  //     cb();
+  //   }
+  // }
+  //
+  // const baking = new Baking();
+  // const specialBaking = new SpecialBaking();
+  //
+  // baking.bake();
+  // specialBaking.bake(specialBake);
+
+  // 15. super
+
+  // class Hero {
+  //
+  //   constructor(name, hp, damage) {
+  //     this.name = name;
+  //     this.hp = hp;
+  //     this.damage = damage;
+  //   }
+  //
+  //   applyDamage(damage) {
+  //     this.hp -= damage;
+  //   }
+  //
+  //   attack(enemy) {
+  //     enemy.applyDamage(this.damage);
+  //   }
+  //
+  // }
+  //
+  // class SuperHero extends Hero {
+  //
+  //   constructor(name, hp, damage, specialDamageRate) {
+  //     super(name, hp, damage);
+  //     this.specialDamageRate = specialDamageRate;
+  //   }
+  //
+  //   attack(enemy) {
+  //     super.attack(enemy);
+  //     this.hp += this.damage * this.specialDamageRate;
+  //   }
+  // }
+  //
+  // const heroA = new SuperHero('A', 100, 10, 2);
+  // const heroB = new Hero('B', 200, 50);
+  // console.log(`${heroA.name} : ${heroA.hp} & ${heroB.name} : ${heroB.hp}`);
+  //
+  // heroA.attack(heroB);
+  // console.log(`${heroA.name} : ${heroA.hp} & ${heroB.name} : ${heroB.hp}`);
+
+  // 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  //
 };

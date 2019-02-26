@@ -39,12 +39,13 @@ module.exports = {
        ]
      }
    ],
+ },
 
-  // resolve: {
-  //   extensions: [
-  //     '.js'
-  //   ]
-  // }
+ plugins: [
+   new webpack.ProvidePlugin({
+     $: 'jquery',
+     jQuery: 'jquery'
+   })
+ ]
 
-  }
 };
