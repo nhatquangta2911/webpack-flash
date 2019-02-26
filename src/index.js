@@ -414,38 +414,117 @@ window.onload = function() {
   // heroA.attack(heroB);
   // console.log(`${heroA.name} : ${heroA.hp} & ${heroB.name} : ${heroB.hp}`);
 
-  // 
+  // 16. static
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  // const label = 'front-end';
   //
+  // class FrontendDeveloper {
+  //
+  //   constructor(name) {
+  //     this.name = name;
+  //   }
+  //
+  //   static work() {
+  //     console.log('working...');
+  //   }
+  //
+  // }
+  //
+  // FrontendDeveloper.work();
+
+
+  // 17. rest (gathering)
+
+  // function sum(...numbers) {
+  //
+  //   return numbers.reduce( (a, b) => a + b, 0);
+  //
+  //
+  // }
+  //
+  // console.log(sum(2, 9, 1, 1, 1, 9, 9, 7));
+
+  // function myConcat(seperator, ...strings) {
+  //
+  //   return strings.join(seperator);
+  //
+  // }
+  //
+  // console.log(myConcat('$$ ', 'Ta ', 'Nhat ', 'Quang ', 'jjang!'));
+
+
+  // 18. spread (spreading)
+
+  // function sum(...numbers) { //gathering
+  //   return numbers.reduce((a, b) => a + b, 0);
+  // }
+  //
+  // const array = [2, 9, 1, 1];
+  //
+  // console.log(sum(...array)); // spread
+
+
+  // 20. shallow cloning
+
+  // const object1 = {
+  //   a: 1,
+  //   b: 2,
+  //   c: {d: 3}
+  // };
+  //
+  // const object2 = {
+  //   ...object1, // shallow cloning (not deep)
+  //   e: 4
+  // };
+  //
+  // console.log(object1);
+  // console.log(object2);
+
+
+  // 21. closure
+
+  // function notify(main) { // higher order function
+  // // higher: parameter is a func || return a function
+  //   return function(extra) {
+  //     console.log(`[${main}] - ${extra}`);
+  //   };
+  //
+  // }
+  //
+  // const note = notify('Main Note');
+  // note('Extra note');
+
+  // function WaitAndRun(ms, func) {
+  //
+  //   setTimeout(func, ms);
+  //
+  // }
+  //
+  // function run() {
+  //   console.log('Runnnnnn');
+  // }
+  //
+  // WaitAndRun(3000, run);
+
+
+  // 23. Destructuring
+
+  // const arr = [2, 9, 1, 1];
+  //
+  // const [a, , ...b] = arr;
+  //
+  // console.log(a, b);
+
+  // const object = {
+  //   a: 1,
+  //   b: 2,
+  //   c: {d: 4}
+  // };
+  //
+  // const {a, ...b} = object;
+  //
+  // console.log(b);
+
+// FINISH JS ADV (ES6) COURSE
+
 };
