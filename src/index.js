@@ -527,4 +527,70 @@ window.onload = function() {
 
 // FINISH JS ADV (ES6) COURSE
 
+// SUPER EXTRA
+
+// A. Promises
+//
+// let promiseToCleanTheRoom = new Promise((resolve, reject) => {
+//
+//   // You're going to clean the room as your promise
+//   // You promise to clean the room
+//   // So, now ...
+//   // You're cleaning the room
+//
+//   let isClean = true;
+//
+//   if(isClean) {
+//     resolve('VERY CLEAN');
+//   } else {
+//     reject('FILTHY');
+//   }
+//
+// });
+//
+// // When then() method is fired
+// // = the promise is resolved already (fulfilled)
+// // and pass the argument (status/ data) back
+// promiseToCleanTheRoom.then(state => console.log(state)).catch(state => console.log(state));
+
+let studyBasicJS = () => {
+  setTimeout(() => {
+    console.log('Finish studying Basic JS');
+  }, 3000);
+  return new Promise((resolve, reject) => resolve('Complete Study Basic JS\n'));
+};
+let studyBasicHTML = (previousState) => new Promise((resolve, reject) => resolve(previousState + 'Complete Study HTML\n'));
+let studyBasicCSS = (previousState) => new Promise((resolve, reject) => resolve(previousState + 'Complete Study CSS\n'));
+let finishBasicCourse = (previousState) => new Promise((resolve, reject) => resolve(previousState + 'CONGRATULATION! You have completed this Basic Course'));
+
+studyBasicJS().then((state) => studyBasicHTML(state))
+              .then((state) => studyBasicCSS(state))
+              .then((state) => finishBasicCourse(state))
+              .then((state) => console.log(state));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
+
 };
