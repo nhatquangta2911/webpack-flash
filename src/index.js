@@ -1,6 +1,12 @@
 require('./css/styles.scss');
 import 'jquery';
 
+// import { foo } from 'my-module.js';
+// import * as myModule from 'my-module.js';
+// import { foo } from "my-module";
+
+import { sayHi } from './my-module.js';
+
 window.onload = function() {
 
   // $("#small-title").on("click", () => {
@@ -311,18 +317,18 @@ window.onload = function() {
   // boss.run();
 
   // 13. class inheritance
-
-  class Animal {
-
-    constructor(name) {
-      this.name = name;
-    }
-
-    eat() {
-      console.log(`${this.name} is eating`);
-    }
-
-  }
+  //
+  // class Animal {
+  //
+  //   constructor(name) {
+  //     this.name = name;
+  //   }
+  //
+  //   eat() {
+  //     console.log(`${this.name} is eating`);
+  //   }
+  //
+  // }
 
   // function Bird(name) {
   //   Animal.apply(this, arguments);
@@ -553,30 +559,34 @@ window.onload = function() {
 // // and pass the argument (status/ data) back
 // promiseToCleanTheRoom.then(state => console.log(state)).catch(state => console.log(state));
 
-let studyBasicJS = () => {
-  setTimeout(() => {
-    console.log('Finish studying Basic JS');
-  }, 3000);
-  return new Promise((resolve, reject) => resolve('Complete Study Basic JS\n'));
-};
-let studyBasicHTML = (previousState) => new Promise((resolve, reject) => resolve(previousState + 'Complete Study HTML\n'));
-let studyBasicCSS = (previousState) => new Promise((resolve, reject) => resolve(previousState + 'Complete Study CSS\n'));
-let finishBasicCourse = (previousState) => new Promise((resolve, reject) => resolve(previousState + 'CONGRATULATION! You have completed this Basic Course'));
-
-studyBasicJS().then((state) => studyBasicHTML(state))
-              .then((state) => studyBasicCSS(state))
-              .then((state) => finishBasicCourse(state))
-              .then((state) => console.log(state));
-
-
+// let studyBasicJS = () => {
+//   setTimeout(() => {
+//     console.log('Finish studying Basic JS');
+//   }, 3000);
+//   return new Promise((resolve, reject) => resolve('Complete Study Basic JS\n'));
+// };
+// let studyBasicHTML = (previousState) => new Promise((resolve, reject) => resolve(previousState + 'Complete Study HTML\n'));
+// let studyBasicCSS = (previousState) => new Promise((resolve, reject) => resolve(previousState + 'Complete Study CSS\n'));
+// let finishBasicCourse = (previousState) => new Promise((resolve, reject) => resolve(previousState + 'CONGRATULATION! You have completed this Basic Course'));
+//
+// studyBasicJS().then((state) => studyBasicHTML(state))
+//               .then((state) => studyBasicCSS(state))
+//               .then((state) => finishBasicCourse(state))
+//               .then((state) => console.log(state));
 
 
+// import, export, default
+
+// graph.options = {
+//     color:'blue',
+//     thickness:'3px'
+// };
+// graph.draw();
+// console.log(cube(3)); // 27
+// console.log(cube(10));
 
 
-
-
-
-
+sayHi('Ryu');
 
 
 
