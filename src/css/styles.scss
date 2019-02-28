@@ -18,24 +18,72 @@ $clickedColor: rgb(192, 109, 200);
   }
 }
 
-   li {
-    font-family: sans-serif;
-    color: rgb(12, 153, 111);
-    font-weight: bold;
-    margin: 15px 0;
-    width: (90% / 5);
-    float: left;
-    list-style: none;
+li {
+  font-family: sans-serif;
+  color: rgb(12, 153, 111);
+  font-weight: bold;
+  margin: 15px 0;
+  width: (90% / 5);
+  float: left;
+  list-style: none;
 
-    &:hover {
-      color: $clickedColor;
-      font-size: 80px;
-      transition: color 0.2s;
-      transition: font-size 0.2s;
-      padding-left: 10px;
-      margin: 2%;
-      border-radius: 10px;
-      background-color: rgb(165, 231, 195);
-    }
-
+  &:hover {
+    color: $clickedColor;
+    font-size: 80px;
+    transition: color 0.2s;
+    transition: font-size 0.2s;
+    padding-left: 10px;
+    margin: 2%;
+    border-radius: 10px;
+    background-color: rgb(165, 231, 195);
   }
+}
+
+#show-content-btn {
+  display: block;
+  clear: both;
+  text-align: center;
+  margin: 20px 30px;
+  color: $clickedColor;
+  border: 1px solid $clickedColor;
+  background-color: #fff;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 6px 20px;
+  font-weight: bold;
+
+  &:hover {
+    font-weight: bold;
+    color: #fff;
+    background-color: $clickedColor;
+  }
+}
+
+.item {
+  margin: 20px 30px;
+  box-sizing: border-box;
+  border: 2px solid $clickedColor;
+  background-color: #fefefe;
+  border-radius: 7px;
+  width: 50%;
+  font-family: sans-serif;
+  color: rgb(89, 87, 88);
+  padding: 0 20px;
+
+  h1 {
+    font-size: 80px;
+  }
+
+  &:hover {
+    background-color: $clickedColor;
+    color: #fff;
+    width: 90%;
+    transition: background-color 0.7s;
+    transition: width 0.7s;
+  }
+}
+
+#main-content {
+  padding: 10px 0;
+  max-height: 100%;
+}

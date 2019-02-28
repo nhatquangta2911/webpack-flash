@@ -5,7 +5,12 @@ import 'jquery';
 // import * as myModule from 'my-module.js';
 // import { foo } from "my-module";
 
-import { sayHi } from './my-module.js';
+import {
+  sayHi,
+  sayHello,
+  pi,
+  object
+} from './my-module.js';
 
 window.onload = function() {
 
@@ -531,62 +536,220 @@ window.onload = function() {
   //
   // console.log(b);
 
-// FINISH JS ADV (ES6) COURSE
+  // FINISH JS ADV (ES6) COURSE
 
-// SUPER EXTRA
+  // SUPER EXTRA
 
-// A. Promises
-//
-// let promiseToCleanTheRoom = new Promise((resolve, reject) => {
-//
-//   // You're going to clean the room as your promise
-//   // You promise to clean the room
-//   // So, now ...
-//   // You're cleaning the room
-//
-//   let isClean = true;
-//
-//   if(isClean) {
-//     resolve('VERY CLEAN');
-//   } else {
-//     reject('FILTHY');
-//   }
-//
-// });
-//
-// // When then() method is fired
-// // = the promise is resolved already (fulfilled)
-// // and pass the argument (status/ data) back
-// promiseToCleanTheRoom.then(state => console.log(state)).catch(state => console.log(state));
+  // A. Promises
+  //
+  // let promiseToCleanTheRoom = new Promise((resolve, reject) => {
+  //
+  //   // You're going to clean the room as your promise
+  //   // You promise to clean the room
+  //   // So, now ...
+  //   // You're cleaning the room
+  //
+  //   let isClean = true;
+  //
+  //   if(isClean) {
+  //     resolve('VERY CLEAN');
+  //   } else {
+  //     reject('FILTHY');
+  //   }
+  //
+  // });
+  //
+  // // When then() method is fired
+  // // = the promise is resolved already (fulfilled)
+  // // and pass the argument (status/ data) back
+  // promiseToCleanTheRoom.then(state => console.log(state)).catch(state => console.log(state));
 
-// let studyBasicJS = () => {
-//   setTimeout(() => {
-//     console.log('Finish studying Basic JS');
-//   }, 3000);
-//   return new Promise((resolve, reject) => resolve('Complete Study Basic JS\n'));
-// };
-// let studyBasicHTML = (previousState) => new Promise((resolve, reject) => resolve(previousState + 'Complete Study HTML\n'));
-// let studyBasicCSS = (previousState) => new Promise((resolve, reject) => resolve(previousState + 'Complete Study CSS\n'));
-// let finishBasicCourse = (previousState) => new Promise((resolve, reject) => resolve(previousState + 'CONGRATULATION! You have completed this Basic Course'));
-//
-// studyBasicJS().then((state) => studyBasicHTML(state))
-//               .then((state) => studyBasicCSS(state))
-//               .then((state) => finishBasicCourse(state))
-//               .then((state) => console.log(state));
-
-
-// import, export, default
-
-// graph.options = {
-//     color:'blue',
-//     thickness:'3px'
-// };
-// graph.draw();
-// console.log(cube(3)); // 27
-// console.log(cube(10));
+  // let studyBasicJS = () => {
+  //   setTimeout(() => {
+  //     console.log('Finish studying Basic JS');
+  //   }, 3000);
+  //   return new Promise((resolve, reject) => resolve('Complete Study Basic JS\n'));
+  // };
+  // let studyBasicHTML = (previousState) => new Promise((resolve, reject) => resolve(previousState + 'Complete Study HTML\n'));
+  // let studyBasicCSS = (previousState) => new Promise((resolve, reject) => resolve(previousState + 'Complete Study CSS\n'));
+  // let finishBasicCourse = (previousState) => new Promise((resolve, reject) => resolve(previousState + 'CONGRATULATION! You have completed this Basic Course'));
+  //
+  // studyBasicJS().then((state) => studyBasicHTML(state))
+  //               .then((state) => studyBasicCSS(state))
+  //               .then((state) => finishBasicCourse(state))
+  //               .then((state) => console.log(state));
 
 
-sayHi('Ryu');
+  // import, export, default
+
+  // graph.options = {
+  //     color:'blue',
+  //     thickness:'3px'
+  // };
+  // graph.draw();
+  // console.log(cube(3)); // 27
+  // console.log(cube(10));
+
+  // ES6 export & import
+
+  // sayHi('Ryu');
+  // sayHello();
+  // console.log(pi);
+  // console.log(object.address.city);
+
+
+  // ES6 Tips & Tricks
+
+  // var specialLog = (a, b, ...n) => console.log(a, b, ...n);
+  //
+  // const numbers = [2, 9, 1, 1, 1, 9, 9, 7];
+  // specialLog(...numbers);
+
+  // const numbers = [2, 9, 1, 1, 1, 9, 9, 7];
+  //
+  // var summary = numbers.reduce((sum, num) => sum + num);
+  // var stringResult = numbers.reduce((result, num) => result + num, '');
+  //
+  // console.log(summary);
+  // console.log(stringResult);
+
+  // const arrDay = [2, 9];
+  // const arrMonth = [1, 1];
+  // const arrYear = [1, 9, 9, 7];
+  //
+  // const arrDateOfBith = ['DoB ', ...arrDay, ... arrMonth, ...arrYear, 'jjang!' ];
+  // console.log(...arrDateOfBith);
+
+  // var items = [
+  //   'OHMYGIRL',
+  //   'WJSN',
+  //   'DREAMCATCHER',
+  //   'TWICE',
+  //   'BLACKPINK',
+  //   'DIA'
+  // ];
+  //
+  // var htmlContent = items.map((item) => `<li> ${item} </li>\n`);
+  // console.log(...htmlContent);
+
+  // var links = [
+  //
+  //   {
+  //     domain: 'https://tnq29.com',
+  //     name: "My Website"
+  //   },
+  //   {
+  //     domain: 'https://linkedin.com/in/quangnhat2911',
+  //     name: "My Profile"
+  //   }
+  //
+  // ];
+  //
+  // var htmlContent = links.map((domain, name) => `
+  // <div>
+  //   <a href="${domain}"> ${name} </a>
+  // </div>
+  // `);
+  //
+  // console.log(...htmlContent);
+
+  // var a = 10939;
+  //
+  // console.log(a.toString(2));
+  //
+  // function getStudent(name, age, score) {
+  //   var student = {name, age, score};
+  //   student['defaultScore'] = 0;
+  //   return student;
+  // }
+  //
+  // var newStudent = getStudent('Quang', 21, 9.4);
+  // console.log(newStudent);
+
+  // var student = {
+  //   name: 'Ryan',
+  //   age: 22,
+  //   score: 9.94
+  // };
+  //
+  // const {name, age, score} = student;
+  //
+  // console.log(name, age, score);
+
+  // ES6 Promises
+
+  // var promiseToCleanTheRoom = new Promise((resolve, reject) => {
+  //   setTimeout(() => resolve('Waiting for 3 seconds'), 3000);
+  //   return new Promise((resolve, reject) => {
+  //     setTimeout(() => resolve('Dull'), 2000);
+  //   });
+  // });
+  //
+  // promiseToCleanTheRoom.then((content) => {
+  //   console.log(content);
+  // }).then((feeling) => {
+  //   console.log(feeling + '!');
+  // });
+
+  // Use Promise to fetch data from an API
+
+  function getData(method, url) {
+    return new Promise((resolve, reject) => {
+      var xhr = new XMLHttpRequest();
+      xhr.open(method, url);
+      xhr.onload = function() {
+        if (this.status >= 200 && this.status < 300) {
+          resolve(xhr.response);
+        } else {
+          reject({
+            status: this.status,
+            statusText: xhr.statusText
+          });
+        }
+      };
+      xhr.onerror = () => {
+        reject({
+          status: this.status,
+          statusText: xhr.statusText
+        });
+      };
+      xhr.send();
+    });
+  }
+
+  getData('GET', 'https://jsonplaceholder.typicode.com/todos').then((data) => {
+    let todos = JSON.parse(data);
+    var content = todos.map((item) => `
+  <div class="item">
+    <h1>${item.id}</h1>
+    <p>${item.title}</p>
+  </div>
+  `);
+    // console.log(...content);
+
+    var btnShow = document.getElementById("show-content-btn");
+    var htmlContent = document.getElementById('main-content');
+
+    btnShow.onclick = () => {
+
+      if (btnShow.innerHTML === 'Show') {
+        htmlContent.innerHTML = content;
+        btnShow.innerHTML = 'Hide';
+      } else {
+        if (btnShow.innerHTML === 'Hide') {
+          htmlContent.innerHTML = '';
+          btnShow.innerHTML = 'Show';
+        }
+      }
+    };
+    //
+    // $("#show-content-btn").on("click", () => {
+    //   $("#show-content-btn").html('Hide');
+    //   $("#main-content").html(content);
+    //
+    // });
+
+  }).catch((error) => console.log(error));
 
 
 
@@ -596,11 +759,6 @@ sayHi('Ryu');
 
 
 
-
-
-
-
-
-//
+  //
 
 };
