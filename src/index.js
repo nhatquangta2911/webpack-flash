@@ -721,11 +721,16 @@ window.onload = function() {
     let todos = JSON.parse(data);
     var content = todos.map((item) => `
   <div class="item">
-    <h1>${item.id}</h1>
-    <p>${item.title}</p>
+    <p class="number">${item.id}</p>
+    <p class="line">${item.title}</p>
+    <img class="photo" src="https://picsum.photos/700/${item.id + 200}">
   </div>
   `);
-    // console.log(...content);
+    var itemContent = content.reduce((result, item) => {
+      return result + item;
+    }, '');
+
+    console.log(itemContent);
 
     var btnShow = document.getElementById("show-content-btn");
     var htmlContent = document.getElementById('main-content');
@@ -733,7 +738,7 @@ window.onload = function() {
     btnShow.onclick = () => {
 
       if (btnShow.innerHTML === 'Show') {
-        htmlContent.innerHTML = content;
+        htmlContent.innerHTML = itemContent;
         btnShow.innerHTML = 'Hide';
       } else {
         if (btnShow.innerHTML === 'Hide') {
@@ -750,6 +755,47 @@ window.onload = function() {
     // });
 
   }).catch((error) => console.log(error));
+
+  // JS closure
+
+  // const outerNumber = 10;
+  //
+  // const addTo = (number) => {
+  //
+  //   number++;
+  //   return function add(innerNumber){
+  //     console.log(innerNumber + number + outerNumber);
+  //   };
+  //
+  // };
+  //
+  // addTo(9).add(8);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

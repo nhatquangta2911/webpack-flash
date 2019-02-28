@@ -61,25 +61,44 @@ li {
 
 .item {
   margin: 20px 30px;
+  width: 95%;
+  display: block;
+  text-align: center;
   box-sizing: border-box;
-  border: 2px solid $clickedColor;
+  border: 1px solid $clickedColor;
   background-color: #fefefe;
   border-radius: 7px;
-  width: 50%;
   font-family: sans-serif;
   color: rgb(89, 87, 88);
   padding: 0 20px;
 
-  h1 {
-    font-size: 80px;
+  .number {
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+
+  .photo {
+    margin-bottom: 10px;
+    width: 80%;
+    border-radius: 7px;
+    display: none;
+    margin-top: 5px;
   }
 
   &:hover {
     background-color: $clickedColor;
     color: #fff;
-    width: 90%;
     transition: background-color 0.7s;
-    transition: width 0.7s;
+    .photo {
+      display: inline;
+      margin-bottom: 10px;
+      width: 80%;
+      border-radius: 7px;
+      margin-top: 5px;
+    }
+    // transition: width 1s;
   }
 }
 
